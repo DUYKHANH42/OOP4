@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BT3
 {
-    public class SinhVienIT : SinhVien
+    public class SinhVienIT : SinhVien // Khai bao lop con
     {
-       private double java ;
-       private double css  ;
+       private double java; // bien rieng cua lop con
+        private double css  ;
         private double html ;
-        public double Java
+        public double Java // get;set
         {
             get { return java; }
             set { java = value; }
@@ -26,13 +26,13 @@ namespace BT3
             get { return html; }
             set { html = value; }
         }
-        public SinhVienIT()
+        public SinhVienIT() // tra ve co gia tri
         {
             java = 0;
             css = 0;
             html = 0;
         }
-        public override double TinhDiem()
+        public override double TinhDiem() // PT ke thua
         {
             return (2 * java + html + css) / 4;
         }

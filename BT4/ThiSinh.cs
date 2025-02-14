@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BT4
 {
     public class ThiSinh
     {
-      private string soBaoDanh;
-      private string hoTen;
-      private string diaChi;
-      private string uuTien;
- 
-        public string SoBaoDanh 
-        { 
-            get => soBaoDanh; set => soBaoDanh = value; 
+        private string soBaoDanh;
+        private string hoTen;
+        private string diaChi;
+        private string uuTien;
+
+        public string SoBaoDanh
+        {
+            get => soBaoDanh; set => soBaoDanh = value;
         }
         public string HoTen
         {
@@ -53,13 +49,13 @@ namespace BT4
         }
         public virtual void Xuat()
         {
+            Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine($" So bao danh: {soBaoDanh} " +
                               $" Ho ten: {hoTen} " +
                               $" Dia chi: {diaChi}" +
-                              $" Uu tien: {uuTien}"+
-                              $" {KhoiThi()}"+
+                              $" Uu tien: {uuTien}" +
+                              $" {KhoiThi()}" +
                               $" DiemTB: {DiemTB()}");
-            Console.BackgroundColor = ConsoleColor.Blue;
 
 
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BT5
 {
@@ -35,8 +31,8 @@ namespace BT5
             base.Xuat();
             Console.WriteLine($"So cho ngoi: {SoChoNgoi}  " +
                               $"Kieu dong co: {KieuDongCo} ");
-        }      
+        }
     }
 
-    }
+}
 

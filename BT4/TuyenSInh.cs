@@ -75,7 +75,7 @@ namespace BT4
             {
                 if (ts.SoBaoDanh == soBaoDanh)
                 {
-                    Console.WriteLine($"Da xoa thi sinh co so bao danh: {soBaoDanh} " );
+                    Console.WriteLine($"Da xoa thi sinh co so bao danh: {soBaoDanh} ");
                     listTS.Remove(ts);
                     return;
                 }

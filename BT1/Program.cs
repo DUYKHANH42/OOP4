@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BT1
 {
@@ -10,10 +6,10 @@ namespace BT1
     {
         static void Main(string[] args)
         {
-            HCN hcn = new HCN(5, 10);
-            hcn.Xuat();
             Console.BackgroundColor = ConsoleColor.Red;
-            HinhVuong hv = new HinhVuong(5);
+            HCN hcn = new HCN(5, 10); // khai bao bien moi cho san gia tri
+            hcn.Xuat();
+            HinhVuong hv = new HinhVuong(5); // khai bao bien moi cho san gia tri
             hv.Xuat();
             Console.ReadKey();
         }

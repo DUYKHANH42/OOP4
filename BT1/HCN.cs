@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BT1
 {
-    public class HCN
+    public class HCN // Khai bao lop Cha HCN 
     {
+        // Khai bao kieu du lieu
         private double chieuDai;
         private double chieuRong;
-        public double ChieuDai
+        public double ChieuDai // Get;Set
         {
             get { return chieuDai; }
             set { chieuDai = value; }
@@ -25,25 +22,25 @@ namespace BT1
             this.chieuDai = chieuDai;
             this.chieuRong = chieuRong;
         }
-        public HCN() 
+        public HCN() // Tra ve gia tri
         {
             this.chieuDai = 0;
             this.chieuRong = 0;
         }
-        public double TinhChuVi()
+        public double TinhChuVi() // Phuong thuc tinh chu vi
         {
             return (chieuDai + chieuRong) * 2;
         }
-        public double TinhDienTich()
+        public double TinhDienTich() // Phuong thuc tinh dien tich
         {
             return chieuDai * chieuRong;
-        }   
-        public virtual void Xuat()
+        }
+        public virtual void Xuat() // Phuong thuc xuat man hinh
         {
             Console.WriteLine($"Hinh chu nhat:" +
                 $"\nChieu dai: {chieuDai}" +
                 $"\nChieu rong: {chieuRong}" +
-                $"\nChu vi: {TinhChuVi()}"+
+                $"\nChu vi: {TinhChuVi()}" +
                 $"\nDientich: {TinhDienTich()}");
         }
     }

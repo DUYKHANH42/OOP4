@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BT3
 {
-    public class SinhVienBiz : SinhVien
+    public class SinhVienBiz : SinhVien // Khai bao lop con
     {
-        double marketing ;
+        double marketing ; // bien rieng cua lop con
         double sale  ;
-        public double Marketing
+        public double Marketing // get;set
         {
             get { return marketing; }
             set { marketing = value; }
@@ -20,12 +20,12 @@ namespace BT3
             get { return sale; }
             set { sale = value; }
         }
-        public SinhVienBiz()
+        public SinhVienBiz() // tra ve co gia tri
         {
             marketing = 0;
             sale = 0;
         }
-        public override double TinhDiem()
+        public override double TinhDiem() // PT ke thua
         {;
             return (2 * marketing+sale) / 3;
         }

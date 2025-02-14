@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BT1
 {
-     class HinhVuong: HCN
+     class HinhVuong: HCN // Khai bao lop con
     {
-        public HinhVuong(double canh) : base(canh, canh)
+        public HinhVuong(double canh) : base(canh, canh) //
         {
         }
-        public override void Xuat()
+        public override void Xuat() //Ghi de xuat man hinh
         {
             Console.WriteLine($"Hinh vuong:" +
                 $"\nCanh: {ChieuDai}" +

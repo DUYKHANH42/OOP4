@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BT3
 {
-    public class SinhVien
+    public class SinhVien // Khai Phuong thuc cha
     {
-        string hoTen;
-        string NgangHoc;
+      private  string hoTen; // Khai bao kieu du lieu cua bien
+       private string NgangHoc;
         //public List<SinhVien> dsSinhVien;
         //public SinhVien()
         //{
@@ -21,7 +17,7 @@ namespace BT3
 
         ////    dsSinhVien.Add(new SinhVienBiz { HoTen = "Nguyen Van E", NganhHoc = "Biz", Marketing = 10, Sale = 10 });
         ////}
-        public string HoTen
+        public string HoTen // get;set
         {
             get { return hoTen; }
             set { hoTen = value; }
@@ -41,11 +37,11 @@ namespace BT3
             this.hoTen = "";
             this.NgangHoc = "";
         }
-        public virtual double TinhDiem()
+        public virtual double TinhDiem() // Pt virtual 
         {
             return 0;
         }
-        public virtual string XepLoai()
+        public virtual string XepLoai() //PT virtual co dieu kien
         {
             if (TinhDiem() < 5)
                 return "Yeu";
@@ -60,11 +56,11 @@ namespace BT3
         }
         public virtual void Xuat()
         {
-            
+
             Console.WriteLine($"Ho va Ten: {hoTen}," +
                               $"\tNganh Hoc: {NganhHoc}" +
                               $"\tDiem: {TinhDiem()}" +
-                              $"\tXep Loai: {XepLoai()}" );
+                              $"\tXep Loai: {XepLoai()}");
             Console.BackgroundColor = ConsoleColor.Red;
 
         }
