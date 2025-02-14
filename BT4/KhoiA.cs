@@ -1,4 +1,6 @@
-﻿namespace BT4
+﻿using System;
+
+namespace BT4
 {
     class KhoiA : ThiSinh
     {
@@ -47,6 +49,11 @@
         public override void Xuat()
         {
             base.Xuat();
+            Console.WriteLine($" Diem toan: {Toan}" +
+                              $" Diem ly: {Ly}" +
+                              $" Diem hoa: {Hoa}"+
+                              $" DiemTb: {DiemTB()}");
+            
         }
 
     }

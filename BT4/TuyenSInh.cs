@@ -87,6 +87,7 @@ namespace BT4
             foreach (ThiSinh ts in listTS)
             {
                 ts.Xuat();
+                
             }
         }
         public void TimKiem(string soBaoDanh)

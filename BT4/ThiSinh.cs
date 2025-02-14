@@ -54,8 +54,7 @@ namespace BT4
                               $" Ho ten: {hoTen} " +
                               $" Dia chi: {diaChi}" +
                               $" Uu tien: {uuTien}" +
-                              $" {KhoiThi()}" +
-                              $" DiemTB: {DiemTB()}");
+                              $" {KhoiThi()}" );
 
 
 

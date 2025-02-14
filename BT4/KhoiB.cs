@@ -53,6 +53,11 @@ namespace BT4
         public override void Xuat()
         {
             base.Xuat();
+            Console.WriteLine($" Diem toan: {Toan}" +
+                             $" Diem sinh: {Sinh}" +
+                             $" Diem hoa: {Hoa}"+
+                              $" DiemTb: {DiemTB()}");
+
         }
     }
     }
