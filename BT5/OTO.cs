@@ -6,16 +6,6 @@ namespace BT5
     {
         private int SoChoNgoi;
         private string KieuDongCo;
-        public int soChoNgoi
-        {
-            get { return SoChoNgoi; }
-            set { SoChoNgoi = value; }
-        }
-        public string kieuDongCo
-        {
-            get { return KieuDongCo; }
-            set { KieuDongCo = value; }
-        }
         public OTO() : base()
         {
             SoChoNgoi = 0;
@@ -26,11 +16,26 @@ namespace BT5
             SoChoNgoi = soChoNgoi;
             KieuDongCo = kieuDongCo;
         }
+        public int soChoNgoi
+        {
+            get { return SoChoNgoi; }
+            set { SoChoNgoi = value; }
+        }
+        public string kieuDongCo
+        {
+            get { return KieuDongCo; }
+            set { KieuDongCo = value; }
+        }
+        
         public override void Xuat()
         {
-            base.Xuat();
-            Console.WriteLine($"So cho ngoi: {SoChoNgoi}  " +
-                              $"Kieu dong co: {KieuDongCo} ");
+            Console.WriteLine($"ID: {id} " +
+            $"Hang xe: {hangSX} " +
+            $"Nam san xuat: {namSX} " +
+            $"Gia ban: {giaBan} " +
+            $"Mau: {mau} " +
+            $"So cho ngoi: {SoChoNgoi}  " +
+            $"Kieu dong co: {KieuDongCo} ");
         }
     }
 

@@ -9,11 +9,6 @@ namespace BT5
     public class XeTai : PhuongTienGT
     {
         private double TrongTai;
-        public double trongTai
-        {
-            get { return TrongTai; }
-            set { TrongTai = value; }
-        }
         public XeTai() : base()
         {
             TrongTai = 0;
@@ -22,10 +17,20 @@ namespace BT5
         {
             TrongTai = trongTai;
         }
+        public double trongTai
+        {
+            get { return TrongTai; }
+            set { TrongTai = value; }
+        }
+        
         public override void Xuat()
         {
-            base.Xuat();
-            Console.WriteLine($"Trong tai: {TrongTai}");
+            Console.WriteLine($"ID: {id} " +
+            $"Hang xe: {hangSX} " +
+            $"Nam san xuat: {namSX} " +
+            $"Gia ban: {giaBan} " +
+            $"Mau: {mau} " +
+            $"Trong tai: {TrongTai}");
         }
 
 

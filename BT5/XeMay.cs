@@ -9,11 +9,6 @@ namespace BT5
     public class XeMay : PhuongTienGT
     {
         private int CongSuat;
-        public int congSuat
-        {
-            get { return CongSuat; }
-            set { CongSuat = value; }
-        }
         public XeMay() : base()
         {
             CongSuat = 0;
@@ -22,10 +17,20 @@ namespace BT5
         {
             CongSuat = congSuat;
         }
-        public override void Xuat()
+        public int congSuat
         {
-            base.Xuat();
-            Console.WriteLine($"Cong suat: {CongSuat}");
+            get { return CongSuat; }
+            set { CongSuat = value; }
+        }
+        
+        public override void Xuat()
+        {  Console.WriteLine($"ID: {id} " +
+            $"Hang xe: {hangSX} " +
+            $"Nam san xuat: {namSX} " +
+            $"Gia ban: {giaBan} " +
+            $"Mau: {mau} "+
+            $"Cong suat: {CongSuat}");
+
         }
     }
     }

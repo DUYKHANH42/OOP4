@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BT5
 {
-    public class QLPTGT : PhuongTienGT
+    public class QLPTGT 
     {
         public List<PhuongTienGT> ds = new List<PhuongTienGT>();
         public QLPTGT()
@@ -16,8 +16,13 @@ namespace BT5
             ds.Add(new XeMay("3", "Yamaha", 2020, 3000000, "Do", 100));
             ds.Add(new OTO("2", "Vinfast", 2020, 2000000, "Den", 4, "Dien"));
         }
+        public void Clear()
+        {
+            Console.Clear();
+        }
         public void AddPTGT()
         {
+            Clear();
             Console.WriteLine("Nhap id:");
             string id = Console.ReadLine();
             if (ds.Exists(x => x.id == id))
@@ -33,24 +38,24 @@ namespace BT5
             double giaBan = double.Parse(Console.ReadLine());
             Console.WriteLine("Nhap mau:");
             string mau = Console.ReadLine();
-            Console.WriteLine("Nhap loai phuong tien:");
-            string PTGT = Console.ReadLine();
+            Console.WriteLine("Nhap loai phuong tien:(1: Xe Tai/2: Xe May/ 3: OTO");
+            int PTGT = int.Parse(Console.ReadLine());
             QLPTGT pt = new QLPTGT();
-            if (PTGT == "XeTai")
+            if (PTGT == 1)
             {
                 Console.WriteLine("Nhap trong tai:");
                 double trongTai = double.Parse(Console.ReadLine());
                 ds.Add(new XeTai(id, hangSX, namSX, giaBan, mau, trongTai));
                 Console.WriteLine("Them thanh cong");
             }
-            else if (PTGT == "XeMay")
+            else if (PTGT ==2)
             {
                 Console.WriteLine("Nhap cong suat:");
                 int congSuat = int.Parse(Console.ReadLine());
                 ds.Add(new XeMay(id, hangSX, namSX, giaBan, mau, congSuat));
                 Console.WriteLine("Them thanh cong");
             }
-            else if (PTGT == "OTO")
+            else if (PTGT == 3)
             {
                 Console.WriteLine("Nhap so cho ngoi:");
                 int soChoNgoi = int.Parse(Console.ReadLine());
@@ -67,6 +72,7 @@ namespace BT5
         }
         public void RemovePTGT()
         {
+            Clear();
             Console.WriteLine("Nhap id:");
             string id = Console.ReadLine();
             foreach (PhuongTienGT pt in ds)
@@ -86,6 +92,7 @@ namespace BT5
         }
         public void TimPTGTTheoHang()
         {
+            Clear();
             Console.WriteLine("Nhap hang xe:");
             string hangxe = Console.ReadLine();
             foreach (PhuongTienGT pt in ds)
@@ -101,6 +108,7 @@ namespace BT5
         }
         public void TimPTGTTheoMau()
         {
+            Clear();
             Console.WriteLine("Nhap mau:");
             string mau = Console.ReadLine();
             foreach (PhuongTienGT pt in ds)
@@ -113,8 +121,9 @@ namespace BT5
             }
             Console.WriteLine("Khong tim thay mau");
         }
-        public override void Xuat()
+        public  void Xuat()
         {
+            Clear();
             foreach (PhuongTienGT pt in ds)
             {
                 pt.Xuat();
